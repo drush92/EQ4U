@@ -1,0 +1,229 @@
+body {
+	background-color: #101a22; /* set the background colour to dark blue whilst the bg image is loading */
+	font-family: Helvetica;
+	color: #CBFCFF;
+	background-image: url("images/electronic.jpg");
+	background-repeat: no-repeat; /* sets the background so it doesnt constantly repeat (not ideal for mobile devices */
+	background-size: cover; 
+	text-align: center;
+}
+
+#overlay {
+  position: fixed; /* sit on top of the page content */
+  display: none; /* hidden by default */
+  width: 100%; /* full width (cover the whole page) */
+  height: 100%; /* full height (cover the whole page) */
+}
+
+/* 'wrap' classes are the main div that contain the pages, they are the same but different heights */
+
+.wrap { 
+margin: auto;
+width: 800px;
+height: 660px;
+border: 5px solid #17213E;
+padding: 10px;
+background-color: #013C64;
+text-align: center;
+position: relative;
+}
+
+.wrap-instructions {
+margin: auto;
+width: 800px;
+height: 880px;
+border: 5px solid #17213E;
+padding: 10px;
+background-color: #013C64;
+text-align: center;
+position: relative;
+}
+
+.wrap-advanced {
+margin: auto;
+width: 800px;
+height: 1630px;
+border: 5px solid #17213E;
+padding: 10px;
+background-color: #013C64;
+text-align: center;
+position: relative;
+}
+
+.wrap-spec {
+margin: auto;
+width: 800px;
+height: 850px;
+border: 5px solid #17213E;
+padding: 10px;
+background-color: #013C64;
+text-align: center;
+position: relative;
+}
+
+
+/* vertical is the name for the sliders, rotated 90 deg. via transform below */
+.vertical {
+    transform: rotateZ(-90deg);
+    width: 100px;
+	height: 10px;
+  margin-top: 40px;
+  appearance: none;
+  background: #17213E; 
+  outline: none; 
+  opacity: 0.7; 
+  transition: opacity .2s;
+}
+
+/* mouse-over effects */
+.vertical:hover {
+  opacity: 1; /* fully shown on mouse-over */
+}
+
+/* buttons used for choosing presets and the instructions nav box */
+.presetbuttons {
+	padding: 10px 24px;
+	transition-duration: 0.6s;
+	background-color: #041E37;
+	border: 2px solid #CBFCFF;
+	color: white;
+}
+
+/* mouse-over effects */
+.presetbuttons:hover {
+  background-color: #CBFCFF;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: black;
+}
+
+/* changes the font size for standard links */
+a {
+	font-size: 13px;
+}
+
+/* div that holds the instructions nav menu, floats to bottom */
+.instructionsbox {
+	position: absolute; 
+	bottom: 68px;
+	margin-left: 150px;
+}
+
+/* div that holds the main nav menu, floats to bottom */
+.navbox {
+	position: absolute; 
+	bottom: 30px;
+	margin-left: 170px;
+}
+
+/* link class for main nav menu, turns them into buttons*/
+a.navigationbuttons {
+	padding: 5px 10px;
+	transition-duration: 0.6s;
+	background-color: #65B5CC;
+	border: 2px solid #CBFCFF;
+	margin-top: 20px;
+	font-family: Helvetica;
+	color: #013C64;
+	font-size: 13px;
+}
+
+/* mouse-over effects */
+a.navigationbuttons:hover {
+  background-color: #CBFCFF; /* crimson when hovered */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: black;
+}
+
+/* div that holds the filter key image in place */
+.filter-image {
+	margin-left: 15px;
+}
+	
+
+/* table to hold advanced functions sliders in */
+      #boxes {
+        content: "";
+        display: table;
+      }
+      .columns {
+        float: left;
+        height: 110px;
+      }
+      #column1 {
+		width: 25px;
+      }
+      #column2 {
+        width: 25px;
+      }
+      #column3 {
+		width: 25px;
+      }
+	  #column4 {
+		width: 25px;
+      }
+      #column5 {
+		width: 25px;
+      }
+      #column6 {
+		width: 25px;
+      }
+	  #column7 {
+		width: 25px;
+      }
+      #column8 {
+       width: 25px;
+      }
+      #column9 {
+		width: 25px;
+      }
+	  #column10 {
+		width:  25px;
+      }
+      #column11 {
+		width: 25px;
+      }
+      #column12 {
+		width: 25px;
+      }
+	  #column13 {
+		width: 25px;
+      }
+	  #column14 {
+		width: 25px;
+	  }
+	  
+/* reveal-wrapper, -content and -top are all part of the sliding divs that show the advanced functions when hovered */
+.reveal-wrapper {				
+	position: relative;
+	overflow: hidden;
+	width: 400px;
+	height: 200px;
+	margin-left: 185px;
+}
+
+
+.reveal-wrapper:hover .reveal-top {
+	left:-100%;
+		width: 400px;
+	height: 200px;
+	position: absolute;
+}
+
+/* holds the sliders */
+.reveal-content {
+	background: #013C64;
+	width: 400px;
+	height: 200px;
+	text-align: center;
+}
+
+/* holds div that displays the text "Hover here.." */
+.reveal-top {
+	background: #013C64;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top:0;
+	left: 0;
+	transition: left 2.5s ease;
+}

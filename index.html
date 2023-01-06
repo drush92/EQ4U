@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+    
+    <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <title>EQ4U</title>
+            <link rel="stylesheet" type="text/css" href="EQ4U.css">
+        
+       </head>
+       
+        <body>
+		
+		<!-- This overlay is what allows the audio player to start in chrome via user gesture which is a click -->
+		<div id="overlay"></div>
+		
+        <div class="wrap">
+		<h1>EQ4U</h1>
+		Select a track to start
+		<p>
+		<!-- Track selection -->
+        <input type="button" class="presetbuttons" value="Alt-Rock" onClick="document.location.reload(true)">   
+		<button class="presetbuttons" onclick="myTrapSelect()">Trap</button>
+        <p>
+        <!-- Preset selection -->
+        Choose a preset
+		<p>
+		<button class="presetbuttons" onclick="myDefaultPreset()">Default</button>  
+		<button class="presetbuttons" onclick="myWarmPreset()">Warm</button>  
+		<button class="presetbuttons" onclick="myBrightPreset()">Bright</button>  
+		<button class="presetbuttons" onclick="myTelephonePreset()">Telephone</button><p>
+		<button class="presetbuttons" onclick="myHiFiScoopPreset()">HiFiScoop</button>  
+		<button class="presetbuttons" onclick="myPresencePreset()">Presence Boost</button>  
+		<button class="presetbuttons" onclick="myReduceSharpnessPreset()">Reduced Sharpness</button>
+        <p>
+		<!-- Audio player -->
+		Press play
+		<p>
+        <audio id="player" controls="controls">
+        <source id=sample1 src="audio/Remnants.mp3" type="audio/mpeg">
+		<source id=sample2 src="audio/Laced.mp3" type="audio/mpeg">
+        </audio>
+		<p>
+		<!-- Advanced functions (with sliding reveal) housed in a CSS table-->
+		<div class="container">
+		<div class="reveal-wrapper">
+		<div class="reveal-content">
+		Control 6 filters
+		<p>
+		<main id="boxes">
+        <div id="column1" class="columns">
+		<input id="filter1FrequencySlider" type="range" class="vertical" min="20" max="16000" step="10" value="20000" data-filter="filter1" data-param="frequency">
+		</div>
+		<div id="column2" class="columns">
+		<input id="filter1QSlider" type="range" class="vertical" min="0" max="3" step="0.1" value="0.7" data-filter="filter1" data-param="Q">
+		</div>
+		<div id="column3" class="columns">
+		<input id="filter2FrequencySlider" type="range" class="vertical" min="20" max="20000" step="10" value="20000" data-filter="filter2" data-param="frequency">
+		</div>
+		<div id="column4" class="columns">
+		<input id="filter2GainSlider" type="range" class="vertical" min="-40" max="40" step="1" value="0" data-filter="filter2" data-param="gain">
+		</div>
+		<div id="column5" class="columns">
+		<input id="filter3FrequencySlider" type="range" class="vertical" min="20" max="20000" step="10" value="20000" data-filter="filter3" data-param="frequency">
+		</div>
+		<div id="column6" class="columns">
+		<input id="filter3QSlider" type="range" class="vertical" min="0" max="3" step="0.1" value="0.7" data-filter="filter3" data-param="Q">
+		</div>
+		<div id="column7" class="columns">
+		<input id="filter3GainSlider" type="range" class="vertical" min="-40" max="40" step="1" value="0" data-filter="filter2" data-param="gain">
+		</div>
+		<div id="column8" class="columns">
+		<input id="filter4FrequencySlider" type="range" class="vertical" min="20" max="20000" step="10" value="20000" data-filter="filter4" data-param="frequency">
+		</div>
+		<div id="column9" class="columns">
+		<input id="filter4QSlider" type="range" class="vertical" min="0" max="3" step="0.1" value="0.7" data-filter="filter4" data-param="Q">
+		</div>
+		<div id="column10" class="columns">
+		<input id="filter4GainSlider" type="range" class="vertical" min="-40" max="40" step="1" value="0" data-filter="filter4" data-param="gain">
+		</div>
+		<div id="column11" class="columns">
+		<input id="filter5FrequencySlider" type="range" class="vertical" min="20" max="20000" step="10" value="20000" data-filter="filter5" data-param="frequency">
+		</div>
+		<div id="column12" class="columns">
+		<input id="filter5GainSlider" type="range" class="vertical" min="-40" max="40" step="1" value="0" data-filter="filter5" data-param="gain">
+		</div>
+		<div id="column13" class="columns">
+		<input id="filter6FrequencySlider" type="range" class="vertical" min="20" max="20000" step="10" value="20000" data-filter="filter6" data-param="frequency">
+		</div>
+		<div id="column14" class="columns">
+		<input id="filter6QSlider" type="range" class="vertical" min="0" max="3" step="0.1" value="0.7" data-filter="filter6" data-param="Q">
+		</div>
+		</main>
+		<img src="images/eq4u_slider_labels_2.png" width="411" class="filter-image" alt="Filter Controls">
+		<p>
+		</div>
+		<!-- This is what appears on top of the sliding reveal -->
+		<div class="reveal-top">
+		<p>
+		<p>
+		Hover here for advanced functions<br>
+		[more info in instructions]
+		</div>
+		</div>
+		</div>
+		<!-- End of advanced functions -->
+		
+		<!-- Main navigation box -->
+		<div class="navbox">
+		<a href="index.html" class="navigationbuttons">Home</a> 
+		<a href="instructions.html" class="navigationbuttons">Instructions</a> 
+		<a href="audio_flow_chart.html" class="navigationbuttons">Audio Flow Chart</a> 
+		<a href="code_flow_chart.html" class="navigationbuttons">Code Flow Chart</a> 
+		<a href="about.html" class="navigationbuttons">About</a> 
+		</div>
+		<!-- Main nav box end -->
+
+		</div>
+		
+		<!-- CSS validation certificate -->
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+		</a>
+
+		<!-- Link to our script -->
+		<script src="EQ4U.js"></script>
+	   
+        </body>
+
+</html>
